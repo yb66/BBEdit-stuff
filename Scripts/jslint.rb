@@ -3,19 +3,14 @@
 # This script will run jslint on a file.
 
 require 'pathname'
+require 'shellwords'
 
-original = Pathname(ENV["BB_DOC_PATH"]).read
+path = Shellwords.escape Pathname(ENV["BB_DOC_PATH"]).to_path
 
-
-require 'tempfile'
-
-fh = Tempfile.new ["jslint-", ".js"]
-fh.write original
-fh.rewind
 begin
   pattern = '(?P<file>.+?):[[:space:]]line[[:space:]](?P<line>[[:digit:]]+),[[:space:]]col[[:space:]](?P<col>[[:digit:]]+),[[:space:]]+(?P<msg>.*)$'
   
-  cmd = %Q!/usr/local/bin/jshint #{fh.path} | bbresults --pattern '#{pattern}'!
+  cmd = %Q!/usr/local/bin/jshint #{path} | bbresults --pattern '#{pattern}'!
   `#{cmd}`
 rescue => e
   warn e
