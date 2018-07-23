@@ -14,7 +14,6 @@ Or you can clone straight into the directory via:
 These should all work with TextWrangler too. Just replace "BBEdit" with "TextWrangler" to find the right place to install them as they share a directory layout and config file structure.
 
 
-
 ## Licence ##
 
 This is here so there's not a licence file floating around inside the BBEdit stuff and confusing anyone (there's already 2 readmes now I've added this, no need to multiply the confusion).
