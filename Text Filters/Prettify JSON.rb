@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+# This is here for prettifying JSON because I don't
+# like to parse things by eye.
+
 require 'json'
 
 orig = ARGF.read

@@ -1,6 +1,8 @@
 #! /usr/bin/env ruby
 # encoding: UTF-8
 
+# I use this to prettify HTML, which is busy at the best of times.
+
 original = ARGF.readlines.join
 
 require 'nokogiri'
