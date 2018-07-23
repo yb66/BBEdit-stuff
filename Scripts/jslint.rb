@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+
+# This script will run jslint on a file.
+
 require 'pathname'
 
 original = Pathname(ENV["BB_DOC_PATH"]).read
