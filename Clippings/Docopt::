@@ -1,0 +1,6 @@
+begin
+  options = Docopt::docopt(USAGE, help: true, version: VERSION)
+rescue Docopt::Exit => e
+  puts e.message
+  exit 0
+end
